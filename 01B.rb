@@ -7,7 +7,7 @@ def find_step(data)
       floor -= 1 if char == ')'
 
       if floor == -1
-          break "Answer: #{step}"
+        break "Answer: #{step}"
       end
   end
 end
