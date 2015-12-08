@@ -1,7 +1,7 @@
 require 'digest'
 
-def advent_mine(num)
-key = 'yzbqklnj'
+def advent_mine(key, num)
+
 match = Array.new(num, '0').join('')
   0.upto(1_000_000_000) do |i|
     hash = Digest::MD5.hexdigest("#{key}#{i}")
@@ -9,5 +9,6 @@ match = Array.new(num, '0').join('')
   end
 end
 
-p advent_mine(5)
-p advent_mine(6)
+key = 'yzbqklnj'
+p advent_mine(key, 5)
+p advent_mine(key, 6)
