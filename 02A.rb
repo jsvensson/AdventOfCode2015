@@ -11,4 +11,5 @@ def get_area(parcel)
   sides.map { |side| 2 * side }.inject(:+) + sides.min
 end
 
-ribbons = data.map { |line| get_ribbon_length(line) }
+parcels = data.map { |line| get_area(line) }
+puts parcels.inject(:+)
